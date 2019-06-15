@@ -1,0 +1,304 @@
+@font-face {
+  font-family: "SanFrancisco";
+  src: url("SanFrancisco.ttf"); }
+@font-face {
+  font-family: "Neucha";
+  src: url("Neucha.ttf"); }
+body {
+  background: #333333 100%;
+  font-family: SanFrancisco;
+  color: white;
+  font-size: 14px; }
+
+.strong {
+  color: #DA8F56;
+  font-size: 16px;
+  font-family: Neucha; }
+
+.header {
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  justify-content: flex-start;
+  margin: 40px; }
+  .header__photo {
+    margin-left: 8%; }
+  .header__image {
+    width: 200px;
+    height: 200px;
+    border: 2px solid #DA8F56;
+    border-radius: 100px; }
+  .header__title-block {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: flex-start;
+    margin-left: 120px;
+    padding: 30px; }
+  .header__name {
+    font-size: 60px;
+    font-family: Neucha; }
+  .header__speciality {
+    margin-top: 20px;
+    font-size: 18px; }
+
+.hr-header, .hr-footer {
+  margin: auto 60px; }
+
+.hr-content {
+  margin: 4px 20px; }
+
+.content {
+  display: flex;
+  flex-direction: row;
+  margin: 20px 60px; }
+  .content__header {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    font-family: Neucha; }
+  .content__header-img {
+    height: 54px;
+    width: 54px; }
+  .content__title {
+    margin: auto 20px;
+    font-size: 36px; }
+  .content__text {
+    font-size: 14px;
+    margin: 16px; }
+  .content__about {
+    margin-bottom: 50px; }
+  .content__left {
+    width: 30%; }
+  .content__right {
+    width: 70%; }
+
+.contact__connect, .contact__follow {
+  font-family: Neucha;
+  font-size: 24px;
+  color: #DA8F56;
+  margin-top: 16px;
+  padding-left: 80px; }
+
+.connect__buttons, .follow__buttons {
+  list-style: none;
+  margin-left: -95px;
+  font-family: SanFrancisco;
+  font-size: 18px; }
+.connect__button, .follow__button {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  text-decoration: none;
+  margin-bottom: 8px; }
+.connect__border, .follow__border {
+  width: 40px;
+  height: 40px;
+  line-height: 50px;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 50%;
+  border: 5px solid #D8E2DC;
+  transition: all 0.5s ease;
+  position: absolute; }
+  .connect__border__hovered, .follow__border__hovered {
+    border: 5px solid #DA8F56;
+    box-shadow: 0 0 15px #DA8F56;
+    transition: all 0.5s ease; }
+.connect__img, .follow__img {
+  color: #D8E2DC;
+  width: 25px;
+  height: 25px;
+  transition: all 0.5s ease;
+  margin: 12px; }
+.connect__link, .follow__link {
+  color: white;
+  margin: 10px; }
+  .connect__link__hovered, .follow__link__hovered {
+    color: #DA8F56;
+    transition: all 0.5s ease; }
+
+.experience__row {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 16px; }
+.experience__cell {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 16px;
+  margin-bottom: 4px; }
+  .experience__cell > * {
+    margin-bottom: 16px; }
+
+.cell__header {
+  display: flex;
+  flex-direction: row;
+  align-items: center; }
+.cell__img {
+  width: 32px;
+  height: 32px; }
+.cell__title {
+  font-family: Neucha;
+  font-size: 28px;
+  color: #DA8F56;
+  margin-left: 12px; }
+.cell__data {
+  font-size: 14px; }
+.cell__link {
+  color: white; }
+.cell__techno {
+  padding: 4px;
+  border: 1px solid #DA8F56;
+  border-radius: 4px;
+  margin: auto 8px; }
+
+.education__list {
+  margin: 16px; }
+.education__list > * {
+  margin-bottom: 10px; }
+.education__header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between; }
+.education__place, .education__date {
+  font-size: 20px;
+  font-family: Neucha;
+  color: #DA8F56; }
+.education__site {
+  font-size: 16px;
+  color: white; }
+.education__role {
+  margin-top: 16px;
+  font-size: 20px; }
+.education__info {
+  font-size: 14px; }
+.education__content {
+  margin-bottom: 50px; }
+
+.skills__row {
+  display: flex;
+  flex-direction: row; }
+.skills__cell {
+  width: 30%;
+  padding: 4px;
+  border: 1px solid #DA8F56;
+  border-radius: 4px;
+  margin: 8px; }
+.skills__row:last-child .skills__cell {
+  width: 100%; }
+.skills__title {
+  display: flex;
+  font-size: 20px;
+  font-family: Neucha;
+  color: #DA8F56;
+  height: 50px;
+  align-items: center;
+  justify-content: center;
+  text-align: center; }
+.skills__content {
+  margin: 8px; }
+.skills__language {
+  font-size: 16px;
+  margin-bottom: 4px; }
+.skills__progress {
+  background-color: #DA8F56;
+  border: 0;
+  height: 10px;
+  border-radius: 5px;
+  margin-bottom: 8px;
+  width: 100%; }
+.skills__progress::-webkit-progress-bar {
+  background-color: white;
+  height: 10px;
+  border-radius: 5px; }
+.skills__progress::-webkit-progress-value {
+  background-color: #DA8F56;
+  height: 10px;
+  border-radius: 5px; }
+.skills__technos {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 16px; }
+.skills__name {
+  padding: 4px;
+  border: 1px solid white;
+  border-radius: 4px;
+  margin: auto 8px;
+  font-size: 20px;
+  font-family: Neucha;
+  padding: 8px; }
+
+.footer {
+  font-size: 18px;
+  font-family: Neucha; }
+  .footer__text {
+    margin: 10px;
+    text-align: center; }
+
+/* Large desktops and laptops */
+/* Portrait tablets and medium desktops */
+@media (min-width: 992px) and (max-width: 1199px) {
+  .header__image {
+    width: 160px;
+    height: 160px; }
+  .header__title-block {
+    margin-left: 30px; }
+  .header__name {
+    font-size: 50px; }
+  .header__speciality {
+    font-size: 18px; } }
+/* Portrait tablets and small desktops */
+@media (min-width: 768px) and (max-width: 991px) {
+  .header__image {
+    width: 140px;
+    height: 140px; }
+  .header__title-block {
+    margin-left: 20px; }
+  .header__photo {
+    margin: 28px; }
+  .header__name {
+    font-size: 40px; }
+  .header__speciality {
+    font-size: 16px; } }
+/* Landscape phones and portrait tablets */
+@media (max-width: 767px) {
+  .header__image {
+    width: 140px;
+    height: 140px; }
+  .header__title-block {
+    margin-left: 8px;
+    padding-left: 0; }
+  .header__photo {
+    margin: 28px; }
+  .header__name {
+    font-size: 32px; }
+  .header__speciality {
+    font-size: 14px; } }
+/* Landscape phones and smaller */
+@media (max-width: 480px) {
+  .header {
+    flex-direction: column;
+    margin-bottom: 10px; }
+    .header__photo {
+      margin: auto; }
+    .header__image {
+      width: 140px;
+      height: 140px; }
+    .header__title-block {
+      margin: 10px auto auto auto;
+      padding: 10px; }
+    .header__name {
+      font-size: 32px;
+      text-align: center; }
+    .header__speciality {
+      font-size: 14px;
+      text-align: center; }
+
+  .hr-header {
+    margin: auto 20px; } }
+
+/*# sourceMappingURL=main.css.map */
