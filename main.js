@@ -10,7 +10,7 @@
     photo.classList = 'header__photo';
     const img = document.createElement('img');
     img.classList = 'header__image';
-    img.src = 'avatar.jpg';
+    img.src = 'images/avatar.jpg';
     photo.appendChild(img);
 
     const titleBlock = document.createElement('div');
@@ -18,11 +18,9 @@
     const name = document.createElement('div');
     name.classList = 'header__name';
     name.textContent = 'ЕЛИЗАВЕТА ДОБРЯНСКАЯ';
-    // name.textContent = 'ЗАГОЛОВОК';
     const speciality = document.createElement('div');
     speciality.classList = 'header__speciality';
     speciality.textContent = 'Разработчик, инженер и просто интересная девушка :)';
-    // speciality.textContent = 'Текст';
     titleBlock.appendChild(name);
     titleBlock.appendChild(speciality);
 
@@ -46,7 +44,7 @@
     const aboutHeader = document.createElement('div');
     aboutHeader.classList = 'content__header';
     const aboutImg = document.createElement('img');
-    aboutImg.src = 'chevron-right.svg';
+    aboutImg.src = 'images/chevron-right.svg';
     aboutImg.classList = 'content__header-img';
     const aboutTitle = document.createElement('div');
     aboutTitle.classList = 'content__title';
@@ -87,7 +85,7 @@
     const contactHeader = document.createElement('div');
     contactHeader.classList = 'content__header';
     const contactImg = document.createElement('img');
-    contactImg.src = 'chevron-right.svg';
+    contactImg.src = 'images/chevron-right.svg';
     contactImg.classList = 'content__header-img';
     const contactTitle = document.createElement('div');
     contactTitle.classList = 'content__title';
@@ -106,19 +104,16 @@
         {
             icon: 'images/phone.svg',
             orange_icon: 'images/phone_oran.svg',
-            link: '',
             data: '+7 (925) 058 28 16',
         },
         {
             icon: 'images/mailru.svg',
             orange_icon: 'images/mailru_oran.svg',
-            link: '',
             data: 'dobrl2011@mail.ru',
         },
         {
             icon: 'images/gmail.svg',
             orange_icon: 'images/gmail_oran.svg',
-            link: '',
             data: 'emdobryanskaya@gmail.com',
         },
         {
@@ -130,14 +125,15 @@
         {
             icon: 'images/skype.svg',
             orange_icon: 'images/skype_oran.svg',
-            link: '',
             data: 'dobr1501',
         },
     ];
     buttonsList.forEach(elem => {
         const li = document.createElement('a');
         li.classList = 'connect__button';
-        li.href = elem.link;
+        if (elem.link) {
+            li.href = elem.link;
+        }
         const liBorder = document.createElement('div');
         liBorder.classList = 'connect__border';
         const liImg = document.createElement('img');
@@ -238,7 +234,7 @@
     const expHeader = document.createElement('div');
     expHeader.classList = 'content__header';
     const expImg = document.createElement('img');
-    expImg.src = 'chevron-right.svg';
+    expImg.src = 'images/chevron-right.svg';
     expImg.classList = 'content__header-img';
     const expTitle = document.createElement('div');
     expTitle.classList = 'content__title';
@@ -254,7 +250,8 @@
             role: 'Я отвечала в этом проекте, в основном, за <span class="strong">Frontend</span> и <span class="strong">мониторинг</span>',
             annotation: 'Это настоящая Real-time <span class="strong">игра</span>, в которой главная задача - выжить :)',
             technologies: ['JavaScript', 'Golang', 'PostgreSQL', 'Node.js', 'Grafana'],
-            img: 'penguin3.svg',
+            img: 'images/penguin3.svg',
+            prod: 'https://penguin-wars.sytes.pro',
         },
         {
             name: 'ГРИП калькулятор',
@@ -262,15 +259,15 @@
             role: 'В мои задачи входило <span class="strong">создание математической библиотеки</span> и настройка <span class="strong">клиент-серверного взаимодействия</span>',
             annotation: 'ГРИП - глубина резко изображаемого пространства. Было разработано десктопное приложение для моделирования <span class="strong">резкости/размытости фотографии</span> в зависимости от параметров фотокамеры',
             technologies: ['C/C++', 'MongoDB', 'Libevent', 'Qt', 'Boost', 'Jansson'],
-            img: 'dof.svg'
+            img: 'images/dof.svg'
         },
         {
             name: 'Ассистент Публикаций',
-            link: 'http://assistent.bmstu.ru/',
             role: 'В этом проекте я и члены моей команды были <span class="strong">фуллстеками</span>.',
             annotation: 'Данный программный продукт - <span class="strong">Портал</span> для организации помощи авторам научных публикаций в МГТУ им. Н.Э. Баумана с переводом и опубликованием в международных журналах. Проект живет и спустя некоторое время вышел в релиз и активно используется внутри МГТУ.',
             technologies: ['Ruby', 'Rails', 'PostgreSQL', 'ActiveStorage', 'jQuery'],
-            img: 'pubAssist.svg'
+            img: 'images/pubAssist.svg',
+            prod: 'http://assistent.bmstu.ru/',
         },
     ];
 
@@ -284,9 +281,12 @@
         const img = document.createElement('img');
         img.src = elem.img;
         img.classList = 'cell__img';
-        const name = document.createElement('div');
+        const name = document.createElement('a');
         name.classList = 'cell__title';
         name.textContent = elem.name;
+        if (elem.prod) {
+            name.href = elem.prod;
+        }
         header.appendChild(img);
         header.appendChild(name);
         cell.appendChild(header);
@@ -310,8 +310,12 @@
         cell.appendChild(data);
         const link = document.createElement('a');
         link.classList = 'cell__link';
-        link.href = elem.link;
-        link.textContent = `Посмотреть ->`;
+        if (elem.link) {
+            link.href = elem.link;
+            link.textContent = `Посмотреть ->`;
+        } else {
+            link.textContent = `Кодес засекречен :(`;
+        }
         cell.appendChild(link);
 
         row.appendChild(cell);
@@ -329,7 +333,7 @@
     const educHeader = document.createElement('div');
     educHeader.classList = 'content__header';
     const educImg = document.createElement('img');
-    educImg.src = 'chevron-right.svg';
+    educImg.src = 'images/chevron-right.svg';
     educImg.classList = 'content__header-img';
     const educTitle = document.createElement('div');
     educTitle.classList = 'content__title';
@@ -345,7 +349,6 @@
             place: 'Технопарк Mail.Ru',
             date: 'Осень 2018 - настоящее время',
             site: 'http://park.mail.ru',
-            // role: 'Студент основной программы «Системный Архитектор»',
             role: 'СТУДЕНТ ОСНОВНОЙ ПРОГРАММЫ «СИСТЕМНЫЙ АРХИТЕКТОР»',
             annotation: '«Технопарк» — совместный проект МГТУ им. Н.Э. Баумана и Mail.Ru Group, направленный на подготовку квалифицированных специалистов для российского рынка веб-разработки. За год обучения мною были изучены алгоритмы и структуры данных, основы веб-разработки, углубленное программирование на C/C++, базы данных, проектирование интерфейсов, разработка на Goland и Frontend-разработка. В ходе обучения мы на практике изучали технологии разработки путем создания собственных проектов',
         },
@@ -353,7 +356,6 @@
             place: 'МГТУ им. Н.Э. Баумана',
             date: '1.09.2016 - настоящее время',
             site: 'bmstu.ru',
-            // role: 'Студент очного отделения (Бакалавр)',
             role: 'СТУДЕНТ ОЧНОГО ОТДЕЛЕНИЯ (БАКАЛАВР)',
             annotation: 'При поступлении мой выбор пал на кафедру «Компьютерные системы и сети» (ИУ6). В течение трех лет мною были изучены основы программирования, технологии разработки программных продуктов, сети и телекоммуникации, схемотехника и электроника, проектирование устройств ЭВМ и микропроцессорные системы. Средний балл - 5',
         },
@@ -416,7 +418,7 @@
     const skillsHeader = document.createElement('div');
     skillsHeader.classList = 'content__header';
     const skillsImg = document.createElement('img');
-    skillsImg.src = 'chevron-right.svg';
+    skillsImg.src = 'images/chevron-right.svg';
     skillsImg.classList = 'content__header-img';
     const skillsTitle = document.createElement('div');
     skillsTitle.classList = 'content__title';

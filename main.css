@@ -1,14 +1,15 @@
 @font-face {
   font-family: "SanFrancisco";
-  src: url("SanFrancisco.ttf"); }
+  src: url("fonts/SanFrancisco.ttf"); }
 @font-face {
   font-family: "Neucha";
-  src: url("Neucha.ttf"); }
+  src: url("fonts/Neucha.ttf"); }
 body {
   background: #333333 100%;
   font-family: SanFrancisco;
   color: white;
-  font-size: 14px; }
+  font-size: 14px;
+  cursor: default; }
 
 .strong {
   color: #DA8F56;
@@ -26,7 +27,7 @@ body {
   .header__image {
     width: 200px;
     height: 200px;
-    border: 2px solid #DA8F56;
+    border: 2px solid white;
     border-radius: 100px; }
   .header__title-block {
     display: flex;
@@ -106,7 +107,7 @@ body {
     box-shadow: 0 0 15px #DA8F56;
     transition: all 0.5s ease; }
 .connect__img, .follow__img {
-  color: #D8E2DC;
+  color: white;
   width: 25px;
   height: 25px;
   transition: all 0.5s ease;
@@ -143,7 +144,8 @@ body {
   font-family: Neucha;
   font-size: 28px;
   color: #DA8F56;
-  margin-left: 12px; }
+  margin-left: 12px;
+  text-decoration: none; }
 .cell__data {
   font-size: 14px; }
 .cell__link {
@@ -241,64 +243,8 @@ body {
 
 /* Large desktops and laptops */
 /* Portrait tablets and medium desktops */
-@media (min-width: 992px) and (max-width: 1199px) {
-  .header__image {
-    width: 160px;
-    height: 160px; }
-  .header__title-block {
-    margin-left: 30px; }
-  .header__name {
-    font-size: 50px; }
-  .header__speciality {
-    font-size: 18px; } }
 /* Portrait tablets and small desktops */
-@media (min-width: 768px) and (max-width: 991px) {
-  .header__image {
-    width: 140px;
-    height: 140px; }
-  .header__title-block {
-    margin-left: 20px; }
-  .header__photo {
-    margin: 28px; }
-  .header__name {
-    font-size: 40px; }
-  .header__speciality {
-    font-size: 16px; } }
 /* Landscape phones and portrait tablets */
-@media (max-width: 767px) {
-  .header__image {
-    width: 140px;
-    height: 140px; }
-  .header__title-block {
-    margin-left: 8px;
-    padding-left: 0; }
-  .header__photo {
-    margin: 28px; }
-  .header__name {
-    font-size: 32px; }
-  .header__speciality {
-    font-size: 14px; } }
 /* Landscape phones and smaller */
-@media (max-width: 480px) {
-  .header {
-    flex-direction: column;
-    margin-bottom: 10px; }
-    .header__photo {
-      margin: auto; }
-    .header__image {
-      width: 140px;
-      height: 140px; }
-    .header__title-block {
-      margin: 10px auto auto auto;
-      padding: 10px; }
-    .header__name {
-      font-size: 32px;
-      text-align: center; }
-    .header__speciality {
-      font-size: 14px;
-      text-align: center; }
-
-  .hr-header {
-    margin: auto 20px; } }
 
 /*# sourceMappingURL=main.css.map */

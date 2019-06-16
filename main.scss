@@ -1,27 +1,30 @@
-$color-blue: #5c9edc;
 $color-orange: #DA8F56;
+$color-black: #333333;
+$font-title: Neucha;
+$font-main: SanFrancisco;
 
 @font-face {
     font-family: "SanFrancisco";
-    src: url("SanFrancisco.ttf");
+    src: url("fonts/SanFrancisco.ttf");
 }
 
 @font-face {
     font-family: "Neucha";
-    src: url("Neucha.ttf");
+    src: url("fonts/Neucha.ttf");
 }
 
 body {
-    background: #333333 100%;
-    font-family: SanFrancisco;
+    background: $color-black 100%;
+    font-family: $font-main;
     color: white;
     font-size: 14px;
+    cursor: default;
 }
 
 .strong {
     color: $color-orange;
     font-size: 16px;
-    font-family: Neucha;
+    font-family: $font-title;
 }
 
 .header {
@@ -38,7 +41,7 @@ body {
     &__image {
         width: 200px;
         height: 200px;
-        border: 2px solid $color-orange;
+        border: 2px solid white;
         border-radius: 100px;
     }
 
@@ -53,7 +56,7 @@ body {
 
     &__name {
         font-size: 60px;
-        font-family: Neucha;
+        font-family: $font-title;
     }
 
     &__speciality {
@@ -79,7 +82,7 @@ body {
         display: flex;
         flex-direction: row;
         justify-content: flex-start;
-        font-family: Neucha;
+        font-family: $font-title;
     }
 
     &__header-img {
@@ -112,7 +115,7 @@ body {
 
 .contact {
     &__connect, &__follow {
-        font-family: Neucha;
+        font-family: $font-title;
         font-size: 24px;
         color: $color-orange;
         margin-top: 16px;
@@ -124,7 +127,7 @@ body {
     &__buttons {
         list-style: none;
         margin-left: -95px;
-        font-family: SanFrancisco;
+        font-family: $font-main;
         font-size: 18px;
     }
 
@@ -155,7 +158,7 @@ body {
     }
 
     &__img {
-        color: #D8E2DC;
+        color: white;
         width: 25px;
         height: 25px;
         transition: all 0.5s ease;
@@ -207,10 +210,11 @@ body {
     }
 
     &__title {
-        font-family: Neucha;
+        font-family: $font-title;
         font-size: 28px;
         color: $color-orange;
         margin-left: 12px;
+        text-decoration: none;
     }
 
     &__data {
@@ -246,7 +250,7 @@ body {
 
     &__place, &__date {
         font-size: 20px;
-        font-family: Neucha;
+        font-family: $font-title;
         color: $color-orange;
     }
 
@@ -290,7 +294,7 @@ body {
     &__title {
         display: flex;
         font-size: 20px;
-        font-family: Neucha;
+        font-family: $font-title;
         color: $color-orange;
         height: 50px;
         align-items: center;
@@ -342,14 +346,14 @@ body {
         border-radius: 4px;
         margin: auto 8px;
         font-size: 20px;
-        font-family: Neucha;
+        font-family: $font-title;
         padding: 8px;
     }
 }
 
 .footer {
     font-size: 18px;
-    font-family: Neucha;
+    font-family: $font-title;
     
     &__text {
         margin: 10px;
@@ -364,111 +368,111 @@ body {
 
 /* Portrait tablets and medium desktops */
 @media (min-width: 992px) and (max-width: 1199px) {
-    .header {
-        &__image {
-            width: 160px;
-            height: 160px;
-        }
+    // .header {
+    //     &__image {
+    //         width: 160px;
+    //         height: 160px;
+    //     }
     
-        &__title-block {
-            margin-left: 30px;
-        }
+    //     &__title-block {
+    //         margin-left: 30px;
+    //     }
     
-        &__name {
-            font-size: 50px;
-        }
+    //     &__name {
+    //         font-size: 50px;
+    //     }
     
-        &__speciality {
-            font-size: 18px;
-        }
-    }    
+    //     &__speciality {
+    //         font-size: 18px;
+    //     }
+    // }    
 }
 
 /* Portrait tablets and small desktops */
 @media (min-width: 768px) and (max-width: 991px) {
-    .header {
-        &__image {
-            width: 140px;
-            height: 140px;
-        }
+    // .header {
+    //     &__image {
+    //         width: 140px;
+    //         height: 140px;
+    //     }
     
-        &__title-block {
-            margin-left: 20px;
-        }
+    //     &__title-block {
+    //         margin-left: 20px;
+    //     }
 
-        &__photo {
-            margin: 28px;
-        }
+    //     &__photo {
+    //         margin: 28px;
+    //     }
     
-        &__name {
-            font-size: 40px;
-        }
+    //     &__name {
+    //         font-size: 40px;
+    //     }
     
-        &__speciality {
-            font-size: 16px;
-        }
-    }    
+    //     &__speciality {
+    //         font-size: 16px;
+    //     }
+    // }    
 }
 
 /* Landscape phones and portrait tablets */
 @media (max-width: 767px) {
-    .header {
-        &__image {
-            width: 140px;
-            height: 140px;
-        }
+    // .header {
+    //     &__image {
+    //         width: 140px;
+    //         height: 140px;
+    //     }
     
-        &__title-block {
-            margin-left: 8px;
-            padding-left: 0;
-        }
+    //     &__title-block {
+    //         margin-left: 8px;
+    //         padding-left: 0;
+    //     }
 
-        &__photo {
-            margin: 28px;
-        }
+    //     &__photo {
+    //         margin: 28px;
+    //     }
     
-        &__name {
-            font-size: 32px;
-        }
+    //     &__name {
+    //         font-size: 32px;
+    //     }
     
-        &__speciality {
-            font-size: 14px;
-        }
-    }  
+    //     &__speciality {
+    //         font-size: 14px;
+    //     }
+    // }  
 }
 
 /* Landscape phones and smaller */
 @media (max-width: 480px) {
-    .header {
-        flex-direction: column;
-        margin-bottom: 10px;
+    // .header {
+    //     flex-direction: column;
+    //     margin-bottom: 10px;
 
-        &__photo {
-            margin: auto;
-        }
+    //     &__photo {
+    //         margin: auto;
+    //     }
 
-        &__image {
-            width: 140px;
-            height: 140px;
-        }
+    //     &__image {
+    //         width: 140px;
+    //         height: 140px;
+    //     }
     
-        &__title-block {
-            margin: 10px auto auto auto;
-            padding: 10px;
-        }
+    //     &__title-block {
+    //         margin: 10px auto auto auto;
+    //         padding: 10px;
+    //     }
     
-        &__name {
-            font-size: 32px;
-            text-align: center;
-        }
+    //     &__name {
+    //         font-size: 32px;
+    //         text-align: center;
+    //     }
     
-        &__speciality {
-            font-size: 14px;
-            text-align: center;
-        }
-    }
+    //     &__speciality {
+    //         font-size: 14px;
+    //         text-align: center;
+    //     }
+    // }
 
-    .hr-header {
-        margin: auto 20px;
-    }
+    // .hr-header {
+    //     margin: auto 20px;
+    // }
 }
