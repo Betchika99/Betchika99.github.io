@@ -438,6 +438,7 @@
             { name: 'CSS', progress: 70, },
             { name: 'C/C++', progress: 60, },
             { name: 'Ruby', progress: 60, },
+            { name: 'Swift', progress: 40, },
             { name: 'Golang', progress: 40, },
         ],
         'ОПЕРАЦИОННЫЕ СИСТЕМЫ': [
